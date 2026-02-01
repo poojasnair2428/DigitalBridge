@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Sargon AI: Malayalam Simplifier",
+  "version": "1.0",
+  "description": "Simplify jargon into 5th-grade English and Malayalam.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

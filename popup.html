@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Base Styling */
+        body { width: 360px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; padding: 12px; margin: 0; }
+        .card { background: white; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; overflow: hidden; }
+        
+        /* Header & Stress-O-Meter Scale */
+        .header { background: #2563eb; color: white; padding: 15px; }
+        .header h1 { margin: 0; font-size: 20px; font-weight: 800; }
+        .scale-container { margin-top: 10px; }
+        .scale-labels { display: flex; justify-content: space-between; font-size: 9px; font-weight: bold; color: #dbeafe; text-transform: uppercase; margin-bottom: 4px; }
+        .scale-bg { background: rgba(255,255,255,0.2); height: 6px; border-radius: 10px; overflow: hidden; }
+        #meterBar { height: 100%; width: 10%; background: #4ade80; transition: all 0.5s ease; }
+
+        /* Content Area */
+        .content { padding: 15px; display: flex; flex-direction: column; gap: 12px; }
+        label { font-size: 10px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        textarea { 
+            width: 100%; border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 12px; 
+            font-size: 13px; resize: none; outline: none; box-sizing: border-box; transition: border 0.2s;
+        }
+        textarea:focus { border-color: #3b82f6; }
+        .output-box { background-color: #f1f5f9; color: #1e293b; font-weight: 500; cursor: default; }
+
+        /* Buttons */
+        .primary-btn { 
+            width: 100%; background: #1e293b; color: white; padding: 12px; border-radius: 10px; 
+            font-weight: 600; cursor: pointer; border: none; transition: transform 0.1s, background 0.2s; 
+        }
+        .primary-btn:hover { background: #334155; }
+        .primary-btn:active { transform: scale(0.98); }
+        .primary-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+        .voice-btn { 
+            width: 100%; background: #3b82f6; color: white; padding: 10px; border-radius: 10px; 
+            font-weight: 600; cursor: pointer; border: none; display: none; align-items: center; 
+            justify-content: center; gap: 8px; margin-top: 5px;
+        }
+        .voice-btn:hover { background: #2563eb; }
+
+        .hidden-data { display: none; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1>Sargon AI</h1>
+                <span id="meterLabel" style="font-size: 12px;">🌿</span>
+            </div>
+            <div class="scale-container">
+                <div class="scale-labels">
+                    <span>Chill</span>
+                    <span>Complex</span>
+                    <span>Stressful</span>
+                </div>
+                <div class="scale-bg">
+                    <div id="meterBar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div>
+                <label>Original Jargon</label>
+                <textarea id="userInput" placeholder="Paste your scary text here..." rows="3"></textarea>
+            </div>
+
+            <button id="processBtn" class="primary-btn">Simplify & Translate</button>
+
+            <div id="resultArea" style="display: none; border-top: 1px dashed #cbd5e1; padding-top: 10px;">
+                <label>Simple English Reply</label>
+                <textarea id="outEn" class="output-box" readonly rows="3"></textarea>
+                
+                <span id="outMl" class="hidden-data"></span>
+                
+                <button id="voiceBtn" class="voice-btn">
+                    <span>🔊</span> Listen in Malayalam
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
