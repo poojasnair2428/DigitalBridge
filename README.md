@@ -1,4 +1,4 @@
-"""# 🌉 Digital Bridge: AI-Powered Text Simplifier & Translator
+🌉 Digital Bridge: AI-Powered Text Simplifier & Translator
 
 **Digital Bridge** is a Chrome Extension designed to break down language barriers and cognitive walls. Using the **Gemini 1.5 Flash** models, it transforms complex, jargon-heavy English text into simple, easy-to-understand language and translates it into Malayalam instantly.
 
