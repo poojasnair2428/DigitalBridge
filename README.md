@@ -24,13 +24,3 @@
 | **Speech** | Web Speech API | Client-side audio synthesis |
 | **Security** | Flask-CORS | Cross-origin resource sharing |
 
----
-
-## ⚙️ Installation & Setup
-
-### 1. Backend Setup
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/your-username/digital-bridge.git](https://github.com/your-username/digital-bridge.git)
-   cd digital-bridge/backend
-   
